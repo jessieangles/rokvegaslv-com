@@ -1,4 +1,20 @@
 RokvegasnightclubCom::Application.routes.draw do
+
+  resources :reservations,
+    :controller => 'promoter/reservations',
+    :only => [:index, :new, :create],
+    :collection => {:thanks => :get}
+
+  resources :guestlists,
+    :controller => 'promoter/guestlists',
+    :only => [:index, :new, :create],
+    :collection => {:thanks => :get}
+
+  # These overrides are necessary because the :thanks routes above will take a lower
+  # precedence than the catchall route at the bottom of this file. (For some reason?)  
+  match '/reservations/thanks' => 'promoter/reservations#thanks'
+  match '/guestlists/thanks' => 'promoter/guestlists#thanks'
+
   root :to => 'root#root'
 
   get "root/root"

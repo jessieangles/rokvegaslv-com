@@ -1,5 +1,5 @@
 if flash[:error]
-  page['error'].replace_html(flash[:error])
+  page['#error'].html(flash[:error])
 else
   page.redirect_to(:action => 'thanks')
 end
