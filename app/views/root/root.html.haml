@@ -1,41 +1,27 @@
-#sidebar
-  %p
-    This sidebar is in the root action template, in the root controller, in app/views/root/root.html.html
-  %p
-    %ul
-      %li navigation
-      %li home
-      %li contact
-      %li etc
-#content
-  %h1
-    Welcome to your new web site!
-  %p
-    This web site is powered by a Rails 3 web application.  Lots of documentation is available
-    for Rails.  Start
-    %a{:href => 'http://weblog.rubyonrails.org/2010/8/28/rails-has-great-documentation'} here.
-  %p
-    The contents of this page are in the root action template, in the root controller,
-    in app/views/root/root.html.haml.  The template files for this web application project are
-    in
-    %a{:src => 'http://haml-lang.com/docs.html'} HAML
-    , which is a powerful shorthand notation for quickly writing HTML that coordinates
-    beautifully with SCSS for styling the page.  The HAML documentation is
-    %a{:src => 'http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html'} here.
-  %p
-    This page is styled using
-    %a{:href => 'http://www.blueprintcss.org/'} Blueprint.
-    You can see
-    demos of what Blueprint can provide,
-    %a{:src => 'http://www.blueprintcss.org/tests/'} here.
-    This project uses the Compass implementation of Blueprint in SCSS, documented
-    %a{:src => 'http://compass-style.org/docs/reference/blueprint/'} here.
-  %p
-    The CSS styling for this page was generated from the SCSS file in
-    app/stylesheets/screen.scss.  There is a section at the bottom of the file that activates
-    the grid and the background colors on the various page sections provided by the Blueprint
-    styles directly above it.  You probably want to start your web site project by locating
-    that file and removing the grid and background colors.  That file is where you should
-    start adding your custom styles.
-  %p
-    Place your images into public/images.
+#homepage_top
+  %a{ :href => "#"}
+    %img{ :src => "/images/homepage/lrg_venueshot.gif" }
+  #eventbanner
+    %img{ :src => "/images/homepage/featuredeventbox/flyer.gif"}
+    %img{ :src => "/images/homepage/featuredeventbox/btn_guestlist.gif"}
+    %img{ :src => "/images/homepage/featuredeventbox/btn_reservation.gif"}
+  
+#col_left
+  %img{ :src => "/images/homepage/titlebars/title_aboutrokvegas.gif"}
+  The Las Vegas outpost of the legendary Miami venue, Rok Vegas is a relaxed nightclub experience for those who want to skip the red rope attitude without compromising on top notch music, amazing visuals and a welcoming atmosphere. With an indoor nightclub featuring the city's first 360° video screen and premium VIP seating, and an outdoor bar overlooking the strip, there's something for everyone at Rok.
+  #linkup
+    %img{ :src => "/images/homepage/titlebars/titlebar_linkup.jpg"}
+    %img{ :src => "/images/homepage/linkup_facebook_btn.gif"}
+    %img{ :src => "/images/homepage/linkup_twitter_btn.gif"}
+  
+#col_right
+  #quicklinks
+    %img{ :src => "/images/homepage/titlebars/title_quicklinks.gif"}
+    %img{ :src => "/images/homepage/quicklink_reservation.jpg"}
+    %img{ :src => "/images/homepage/quicklink_guestlist.jpg"}
+  #special_promos
+    %img{ :src => "/images/homepage/titlebars/title_specialpromotions.gif"}
+    %img{ :src => "/images/homepage/promos/promo_champagne.gif"}
+    %img{ :src => "/images/homepage/promos/promo_beer.gif"}
+    %img{ :src => "/images/homepage/promos/promo_guys.gif"}
+    
