@@ -1,0 +1,102 @@
+h1. Venue Driver Promoter
+
+This plugin provides easy client access for Rails 3 web sites to the Venue Driver REST API.  You must
+have access to a Venue Driver account to use this plugin in a web site.  For Rails 2 support, get the
+rails2 branch.
+
+h2. Features
+
+* Remote read access to Venue Driver Event records through Active Resource.
+* The ability to create new Reservation and Guest list records through Active Resource.
+* A convenience custom REST collection action that returns a drop-down HTML selector with an event list, for signup forms.
+* The ability to create new mailing list signups by posting to a Contacts resource.
+* Rails 3 compatible
+
+h3. Installation
+
+The Promoter plugin functions as a Rails Engine plugin and it is compatible with Rails 3.  It is
+not set up to be used as a Rails Engine when installed as a gem, only when used as a plugin.
+
+As a Rails 3 plugin:
+
+<pre>rails plugin install https://github.com/angelmg/promoter.git</pre>
+
+As a Git submodule:
+
+<pre>git submodule add git@github.com:angelmg/promoter.git</pre>
+
+Install the "Prototype Legacy Helper plugin":https://github.com/rails/prototype_legacy_helper in your Rails 3 app.
+
+h3. Configuration
+
+The plugin needs to know your Venue Driver account information.  You can configure that information by adding an initializer to your app in @config/initializers/promoter.rb@ like this:
+
+<pre>
+VENUE_DRIVER = {
+  :username => 'somewebsite',
+  :password => 'yourpassword',
+  :account_id => 908134,
+  :venue_id => 124319,
+  :staff_id => 250728
+}
+</pre>
+
+You can also specify the :local_server boolean value (:local_server => true) to instruct the Promoter plugin to look for Venue Driver at localhost:3000 instead of venuedriver.com.
+
+h3. Your New Classes
+
+The Promoter plugin provides some important model classes for communicating with Venue Driver.  The following are mirrors of model classes in Venue Driver:
+
+* Contact
+* Event
+* Flyer
+* Guest
+* Reservation
+
+In addition, the plugin provides some utility classes.  The EventSelect model wraps a 15-minute Rails cache around the select_event Venue Driver REST API method.  To refresh the cache, use the Rake task provided by the Promoter plugin:
+
+<pre>rake promoter:event_select:refresh</pre>
+
+h3. Your New Routes
+
+The plugin provides new routes for your Rails 3 web app:
+
+* /reservations
+* /guestlists
+* /contacts
+
+Those routes provide functional UI for handling signups.  You can override those templates by copying the Promoter plugin's views into /app/views/promoter in your Rails 3 app.  In most cases you'll probably want to override the templates, because the included templates were factored out of a real venue's web app, and they make assumptions about images that you probably don't have.  Notably the indicator.gif in the forms.
+
+h3. The EventSelect model
+
+You can use the EventSelect model to display a select tag in your view templates that contains the upcoming Event records in Venue Driver for the configured Venue.  Use it like this:
+
+<pre>
+  <%= EventSelect.tag.html_safe %>
+</pre>
+
+The three included controllers, ContactsController, GuestlistsController, and ReservationsController, all derive from a common PromoterController, which sets @events equal to EventSelect.tag, so the forms in the view templates use:
+
+<pre>
+  <%= @events.html_safe %>
+</pre>
+
+h3. The AreaSelect model
+
+AreaSelect is a utility model similar to EventSelect, for displaying an HTML select tag containing the seating areas available for your venue.  Use it like this:
+
+<pre>
+  <%= AreaSelect.tag.html_safe %>
+</pre>
+
+h3. Action Names
+
+This plugin uses RESTful routing.  Therefore, the form for creating a new reservation or guest or contact signup is "new".  A name like "form" might sound more intuitive, but REST says that it should be "new".  Any thank-you message would be the result of a reservation getting posted, which is a "create".  So the thank-you confirmation message goes in "create".
+
+h3. Email Overrides
+
+If you need to send an email or perform some other action instead of doing a Venue Driver signup, then you can override the controllers and you can add the :with_names => true option to EventSelect.tag so that the values submitted in the form will be the names of events instead of numeric database ID's.
+
+<pre>
+  <%= EventSelect.tag(:with_names => true).tag.html_safe %>
+</pre>

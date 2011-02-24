@@ -1,0 +1,92 @@
+<div id="container_topcontent">
+       
+<% form_remote_tag :url => contacts_path,
+ 	:loading => "Element.show('indicator');",
+ 	:complete => "Element.hide('indicator');" do -%>
+
+<div id="error">
+	<% if flash[:error] %>
+		Something went wrong<br />
+		<div id="error"><%= flash[:error] %></div>
+	<% else %>
+		Please  fill out the form below to join our contacts list.
+	<% end %>
+</div>
+	
+<table width="100%" border="0" cellspacing="10">
+<tr>
+  <td width="28%" align="right">First Name</td>
+  <td width="72%"><input type="text" name="first" id="first" />
+    <span>*</span></td>
+</tr>
+<tr>
+  <td align="right">Last Name</td>
+  <td><input type="text" name="last" id="last" />
+    <span>*</span></td>
+  </tr>
+<tr>
+  <td align="right">Phone</td>
+  <td><input type="text" name="phone" id="phone" /></td>
+  </tr>
+<tr>
+  <td align="right">Email</td>
+  <td><input type="text" name="email" id="email" />
+    <span>*</span></td>
+  </tr>
+<tr>
+  <td align="right">Confirm Email</td>
+  <td><input type="text" name="email_confirm" id="email_confirm" />
+    <span>*</span></td>
+  </tr>
+<tr>
+  <td align="right">D.O.B.</td>
+  <td width="72%"><%= select_date(Date.today - 21.years, :prefix => 'dob', :start_year => 1930) %>
+    <span>*</span></td>
+  </tr>
+  <tr>
+  <td align="right">Gender</td>
+  <td><input type="radio" name="gender" id="male" value="male" />
+    Male        
+      <input type="radio" name="gender" id="female" value="female" />
+      Female</td>
+  </tr>
+  <tr>
+  <td align="right">STREET Address 1</td>
+  <td><input name="address_1" type="text" size="25" /><span>*</span></td>
+  </tr>
+  <tr>
+  <td align="right">STREET Address 2</td>
+  <td><input name="address_2" type="text" size="25" /></td>
+  </tr>
+  <tr>
+  <td align="right">CITY</td>
+  <td><input name="city" type="text" size="25" /><span>*</span></td>
+  </tr>
+  <tr>
+  <td align="right">STATE</td>
+  <td>
+  	<select id="state" name="state">
+	  <%= options_for_select( [[ "Select a State", "" ]] + US.states )%>
+	</select>
+  <span>*</span></td>
+  </tr>
+  <tr>
+  <td align="right">ZIP</td>
+  <td><input name="zip" type="text" size="25" /><span>*</span></td>
+  </tr>
+<tr>
+  <td align="right">&nbsp;</td>
+  <td><br />
+    <span>* </span><span class="norm_grey">Required Field </span>
+    <p class="norm_grey"><span>* </span>By submitting your information you agree to the use of your contact information for marketing purposes.</p>
+    <br />
+    <br />
+	<%= submit_tag 'submit', :id => 'create' %>
+	<%= image_tag 'indicator.gif', :id => 'indicator', :style => 'display: none;' %><br />
+    <br /></td>
+  </tr>
+</table>
+
+<% end %>
+
+</div>
