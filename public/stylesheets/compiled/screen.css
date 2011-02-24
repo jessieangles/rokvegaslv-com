@@ -197,3 +197,31 @@ a:hover {
 #eventbanner img {
   margin: 0px -4px -4px 0px;
 }
+
+/* line 111, ../../../app/stylesheets/screen.scss */
+#event_slider {
+  text-align: center;
+  margin: 0px 0px 15px 0px;
+}
+
+/* line 116, ../../../app/stylesheets/screen.scss */
+#promo_container {
+  width: 660px;
+  margin: 0px auto;
+}
+
+/* line 121, ../../../app/stylesheets/screen.scss */
+#promo_container img {
+  margin: 0px 0px 13px 0px;
+}
+
+/* line 127, ../../../app/stylesheets/screen.scss */
+#form {
+  width: 346px;
+  margin: 30px auto 0px auto;
+}
+
+/* line 132, ../../../app/stylesheets/screen.scss */
+#form p {
+  margin: 0px 0px 20px 0px;
+}

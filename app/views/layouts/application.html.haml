@@ -15,19 +15,20 @@
     %link{:rel=>"stylesheet", :href=>"/css/anythingslider.css", :media=>"screen, projection", :type=>"text/css"}
     %link{:rel=>"stylesheet", :href=>"/css/theme-metallic.css", :media=>"screen, projection", :type=>"text/css"}
   #header
-    #logobox
+    %a{ :href => "/"}
+      #logobox
     #nav
-      %a{ :href => "#"}
+      %a{ :href => "/events"}
         %img{ :src => "/images/global/nav/nav_01_events.gif"}
-      %a{ :href => "#"}
+      %a{ :href => "/guestlist"}
         %img{ :src => "/images/global/nav/nav_02_guestlist.gif"}
-      %a{ :href => "#"}
+      %a{ :href => "/reservations"}
         %img{ :src => "/images/global/nav/nav_03_reservations.gif"}
-      %a{ :href => "#"}
+      %a{ :href => "/contactus"}
         %img{ :src => "/images/global/nav/nav_04_contactus.gif"}
-      %a{ :href => "#"}
+      %a{ :href => "/planyourparty"}
         %img{ :src => "/images/global/nav/nav_05_plan.gif"}
-      %a{ :href => "#"}
+      %a{ :href => "/corporateevents"}
         %img{ :src => "/images/global/nav/nav_06_corpevents.gif"}
   #container
     = yield
