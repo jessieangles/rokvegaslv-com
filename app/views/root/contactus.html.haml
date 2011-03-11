@@ -1,34 +1,36 @@
 #form
-  %img{ :src => "/images/forms/titlebars/titlebar_contactus.gif"}
-  %img{ :src => "/images/forms/contact_infobox.gif"}
-  %br
-  %br
-  <table width="346" height="400px" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-  <td valign="middle"><b>First Name</b></td>
-  <td valign="middle"><input type="text" name="textfield" id="textfield" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Last Name</b></td>
-  <td valign="middle"><input type="text" name="textfield2" id="textfield2" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Phone</b></td>
-  <td valign="middle"><input type="text" name="textfield3" id="textfield3" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Email</b></td>
-  <td valign="middle"><input type="text" name="textfield4" id="textfield4" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Confirm Email</b></td>
-  <td valign="middle"><input type="text" name="textfield5" id="textfield5" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Comments</b></td>
-  <td valign="middle"><textarea name="textfield6" rows="8" id="textfield6"></textarea></td>
-  </tr>
-  <tr>
-  <td colspan="2" valign="middle"><img src="/images/forms/btn_submit.gif"</td>
-  </tr>
-  </table>
+  = form_tag do
+    - flash_messages
+    %img{ :src => "/images/forms/titlebars/titlebar_contactus.gif"}
+    %img{ :src => "/images/forms/contact_infobox.gif"}
+    %br
+    %br
+    <table width="346" height="400px" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td valign="middle"><b>First Name</b></td>
+    <td valign="middle"><input type="text" name="textfield" id="textfield" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Last Name</b></td>
+    <td valign="middle"><input type="text" name="textfield2" id="textfield2" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Phone</b></td>
+    <td valign="middle"><input type="text" name="textfield3" id="textfield3" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Email</b></td>
+    <td valign="middle"><input type="text" name="textfield4" id="textfield4" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Confirm Email</b></td>
+    <td valign="middle"><input type="text" name="textfield5" id="textfield5" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Comments</b></td>
+    <td valign="middle"><textarea name="textfield6" rows="8" id="textfield6"></textarea></td>
+    </tr>
+    <tr>
+    <td colspan="2" valign="middle"><img src="/images/forms/btn_submit.gif"</td>
+    </tr>
+    </table>
