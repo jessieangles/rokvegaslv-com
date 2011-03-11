@@ -8,29 +8,31 @@
     <table width="346" height="400px" border="0" cellspacing="0" cellpadding="0">
     <tr>
     <td valign="middle"><b>First Name</b></td>
-    <td valign="middle"><input type="text" name="textfield" id="textfield" /></td>
+    <td valign="middle"><input type="text" name="first" id="first" value="#{ params[:first] }" /></td>
     </tr>
     <tr>
     <td valign="middle"><b>Last Name</b></td>
-    <td valign="middle"><input type="text" name="textfield2" id="textfield2" /></td>
+    <td valign="middle"><input type="text" name="last" id="last" value="#{ params[:last] }" /></td>
     </tr>
     <tr>
     <td valign="middle"><b>Phone</b></td>
-    <td valign="middle"><input type="text" name="textfield3" id="textfield3" /></td>
+    <td valign="middle"><input type="text" name="phone" id="phone" value="#{ params[:phone] }" /></td>
     </tr>
     <tr>
     <td valign="middle"><b>Email</b></td>
-    <td valign="middle"><input type="text" name="textfield4" id="textfield4" /></td>
+    <td valign="middle"><input type="text" name="email" id="email" value="#{ params[:email] }" /></td>
     </tr>
     <tr>
     <td valign="middle"><b>Confirm Email</b></td>
-    <td valign="middle"><input type="text" name="textfield5" id="textfield5" /></td>
+    <td valign="middle"><input type="text" name="confirm_email" id="confirm_email" value="#{ params[:confirm_email] }" /></td>
     </tr>
     <tr>
     <td valign="middle"><b>Comments</b></td>
-    <td valign="middle"><textarea name="textfield6" rows="8" id="textfield6"></textarea></td>
+    <td valign="middle"><textarea name="comments" rows="8" id="comments">#{params[:comments]}</textarea></td>
     </tr>
     <tr>
-    <td colspan="2" valign="middle"><img src="/images/forms/btn_submit.gif"</td>
+    <td colspan="2" valign="middle">
+    = image_submit_tag "/images/forms/btn_submit.gif"
+    </td>
     </tr>
     </table>
