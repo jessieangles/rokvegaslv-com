@@ -1,0 +1,71 @@
+<% form_tag '/guestlists', :remote => true,
+  :loading => "Element.show('indicator');",
+  :complete => "Element.hide('indicator');" do -%>
+	
+	<div id="error">
+		<% if flash[:error] %>
+			Something went wrong<br />
+			<div id="error"><%= flash[:error] %></div>
+		<% end %>
+	</div>
+			
+  <table width="346" border="0" cellspacing="10" style="margin-left: auto; margin-right: auto;">
+  <tr>
+    <td colspan="2" style="padding-top: 2em; padding-bottom: 2em;">
+    	<img src = "/images/forms/titlebars/titlebar_guestlist.gif">
+      <p>
+        Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="107" align="right">Event</td>
+    <td width="239"><%= EventSelect.tag.html_safe %></td>
+  </tr>
+  <tr>
+    <td align="right">First Name</td>
+    <td><input type="text" name="first" id="first" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right">Last Name</td>
+    <td><input type="text" name="last" id="last" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right">Phone</td>
+    <td><input type="text" name="phone" id="phone" /></td>
+    </tr>
+  <tr>
+    <td align="right">Email</td>
+    <td><input type="text" name="email" id="email" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right">Confirm Email</td>
+    <td><input type="text" name="email_confirm" id="email_confirm" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right"># Guests</td>
+    <td width="72%">	<select name="extra_count" id="extra_count">
+      <option value="1">+1</option>
+      <option value="2">+2</option>
+      <option value="3">+3</option>
+      <option value="">no guests</option>
+    </select>
+      <span>*</span></td>
+  </tr>
+  <tr>
+    <td colspan="2"><br />
+      <span>* </span><span class="norm_grey">Required Field </span>
+      <p class="norm_grey"><span>* </span>By submitting your information you agree to the use of your contact information for marketing purposes.</p>
+      <br />
+      <br />
+      <%= image_submit_tag "/images/forms/btn_submit.gif", :id => 'create' %>
+      <%= image_tag 'indicator.gif', :id => 'indicator', :style => 'display: none;' %><br />
+      <br /></td>
+    </tr>
+</table>
+
+<% end %>
