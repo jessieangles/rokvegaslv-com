@@ -1,47 +1,51 @@
 #form
-  %img{ :src => "/images/forms/titlebars/titlebar_planyourparty.gif"}
-  %p
-    Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna.
-  <table width="346" height="300px" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-  <td width="107" valign="middle"><b>Event</b></td>
-  <td width="239" valign="middle"><select name="select" id="select">
-  <option>Select An Event</option>
-  </select></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>First Name</b></td>
-  <td valign="middle"><input type="text" name="textfield" id="textfield" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Last Name</b></td>
-  <td valign="middle"><input type="text" name="textfield2" id="textfield2" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Phone</b></td>
-  <td valign="middle"><input type="text" name="textfield3" id="textfield3" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Email</b></td>
-  <td valign="middle"><input type="text" name="textfield4" id="textfield4" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b>Confirm Email</b></td>
-  <td valign="middle"><input type="text" name="textfield5" id="textfield5" /></td>
-  </tr>
-  <tr>
-  <td valign="middle"><b># of Guests</b></td>
-  <td><select name="select" id="select">
-  <option>Select # of Guests</option>
-  <option>5-10</option>
-  <option>11-15</option>
-  <option>16-20</option>
-  <option>21-30</option>
-  <option>30+</option>
+  = form_tag do
+    - flash_messages
+    %img{ :src => "/images/forms/titlebars/titlebar_planyourparty.gif"}
+    %p
+      Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna.
+    <table width="346" height="300px" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td width="107" valign="middle"><b>Event</b></td>
+    <td width="239" valign="middle">
+    = EventSelect.tag({:with_names=>true}).html_safe
+    </td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>First Name</b></td>
+    <td valign="middle"><input type="text" name="first" id="first" value="#{ params[:first] }" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Last Name</b></td>
+    <td valign="middle"><input type="text" name="last" id="last" value="#{ params[:last] }" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Phone</b></td>
+    <td valign="middle"><input type="text" name="phone" id="phone" value="#{ params[:phone] }" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Email</b></td>
+    <td valign="middle"><input type="text" name="email" id="email" value="#{ params[:email] }" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b>Confirm Email</b></td>
+    <td valign="middle"><input type="text" name="confirm_email" id="confirm_email" value="#{ params[:confirm_email] }" /></td>
+    </tr>
+    <tr>
+    <td valign="middle"><b># of Guests</b></td>
+    <td><select name="guests" id="guests">
+    <option value="">Select # of Guests</option>
+    <option>5-10</option>
+    <option>11-15</option>
+    <option>16-20</option>
+    <option>21-30</option>
+    <option>30+</option>
   
-  </select></td>
-  </tr>
-  <tr>
-  <td colspan="2" valign="middle"><img src="/images/forms/btn_submit.gif"</td>
-  </tr>
-  </table>
+    </select></td>
+    </tr>
+    <tr>
+    <td colspan="2" valign="middle">
+    = image_submit_tag "/images/forms/btn_submit.gif"
+    </td>
+    </tr>
+    </table>

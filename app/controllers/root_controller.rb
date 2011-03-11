@@ -1,19 +1,25 @@
 class RootController < ApplicationController
 
-  def root
-  end
-
   def contactus
-    
     return unless request.post?
-    
     return if missing_required_items?([:first, :last, :phone, :email, :confirm_email])
-    
     return unless email_confirmation_match?
-
     NotificationMailer.contact(params).deliver
-    
   end
+
+  def planyourparty
+    return unless request.post?
+    return if missing_required_items?([:first, :last, :phone, :email, :confirm_email, :guests])
+    return unless email_confirmation_match?
+    NotificationMailer.plan_your_party(params).deliver
+  end  
+
+  def corporateevents
+    return unless request.post?
+    return if missing_required_items?([:first, :last, :company, :phone, :email, :confirm_email, :guests])
+    return unless email_confirmation_match?
+    NotificationMailer.corporate_events(params).deliver
+  end  
 
   private
   
