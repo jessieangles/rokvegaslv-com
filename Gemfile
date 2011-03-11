@@ -17,7 +17,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'ruby-debug'
 # gem 'ruby-debug19'
 
-gem 'prototype_legacy_helper', '0.0.0', :git => 'git://github.com/rails/prototype_legacy_helper.git'
+gem 'configurable_engine'
 
 # Bundle the extra gems:
 # gem 'bj'
