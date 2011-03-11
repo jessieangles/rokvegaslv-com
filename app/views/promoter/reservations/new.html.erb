@@ -1,0 +1,63 @@
+<%= form_for [@reservation, Reservation.new], :remote => true,
+  :loading => "Element.show('indicator');",
+  :complete => "Element.hide('indicator');" do -%>
+
+  <div id="error">
+  	<% if flash[:error] %>
+  		Something went wrong<br />
+  		<div id="error"><%= flash[:error] %></div>
+  		<br/><br/>
+  	<% end %>
+  </div>
+	  
+  <table width="346" border="0" cellspacing="10" style="margin-left: auto; margin-right: auto;">
+  <tr>
+    <td colspan="2" style="padding-top: 2em; padding-bottom: 2em;">
+    	<img src = "/images/forms/titlebars/titlebar_reservation.gif">
+      <p>
+        Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="107" align="right"><b>Event</b></td>
+    <td width="239"><%= EventSelect.tag.html_safe %></td>
+  </tr>
+  <tr>
+    <td align="right"><b>First Name</b></td>
+    <td><input type="text" name="first" id="first" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right"><b>Last Name</b></td>
+    <td><input type="text" name="last" id="last" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right"><b>Phone</b></td>
+    <td><input type="text" name="phone" id="phone" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right"><b>Email</b></td>
+    <td><input type="text" name="email" id="email" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td align="right"><b>Confirm Email</b></td>
+    <td><input type="text" name="email_confirm" id="email_confirm" />
+      <span>*</span></td>
+    </tr>
+  <tr>
+    <td colspan="2"><br />
+      <span>* </span><span class="norm_grey">Required Field </span>
+      <p class="norm_grey"><span>* </span>By submitting your information you agree to the use of your contact information for marketing purposes.</p>
+      <br />
+      <br />
+      <%= image_submit_tag "/images/forms/btn_submit.gif", :id => 'create' %>
+      <%= image_tag 'indicator.gif', :id => 'indicator', :style => 'display: none;' %><br />
+      <br /></td>
+    </tr>
+  </table>
+
+	<% end %>
