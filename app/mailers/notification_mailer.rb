@@ -13,7 +13,7 @@ class NotificationMailer < ActionMailer::Base
          :subject => "Plan Your Party form from rokvegasnightclub.com")
   end
 
-  def contact(params)
+  def corporate_events(params)
     @params = params
     mail(:to => Configurable[:corporate_events_email],
          :subject => "Corporate Events form from rokvegasnightclub.com")
