@@ -5,6 +5,7 @@ class RootController < ApplicationController
     return if missing_required_items?([:first, :last, :phone, :email, :confirm_email])
     return unless email_confirmation_match?
     NotificationMailer.contact(params).deliver
+    render :action => :confirm_general
   end
 
   def planyourparty
@@ -12,6 +13,7 @@ class RootController < ApplicationController
     return if missing_required_items?([:first, :last, :phone, :email, :confirm_email, :guests])
     return unless email_confirmation_match?
     NotificationMailer.plan_your_party(params).deliver
+    render :action => :confirm_general
   end  
 
   def corporateevents
@@ -19,6 +21,7 @@ class RootController < ApplicationController
     return if missing_required_items?([:first, :last, :company, :phone, :email, :confirm_email, :guests])
     return unless email_confirmation_match?
     NotificationMailer.corporate_events(params).deliver
+    render :action => :confirm_general
   end  
 
   private
