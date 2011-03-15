@@ -1,5 +1,6 @@
 // This import applies a global reset to any page that imports this stylesheet.
 @import "blueprint/reset";
+@import "compass/utilities/general/clearfix";
 
 // GLOBAL STYLES //
 
@@ -41,16 +42,16 @@ a:hover {
 }
 
 #container {
-  width:750px;
+  width:770px;
   margin:0px auto;
 }
 
 #footer {
+  @include clearfix;
   width:770px;
-  position:absolute;
-  top:100%;
-  left:50%;
-  margin: 0px auto;
+  padding-top: 3em;
+  margin: 0 auto 0 auto;
+  text-align: center;
   
   li {
     float:left;

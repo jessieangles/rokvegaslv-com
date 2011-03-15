@@ -1,4 +1,4 @@
-/* line 4, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,12 +10,12 @@ html, body {
   vertical-align: baseline;
 }
 
-/* line 6, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 6, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   font-size: 100.01%;
 }
 
-/* line 16, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 16, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 pre, a, abbr, acronym, address, code, del, dfn, em, img,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
@@ -29,7 +29,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   vertical-align: baseline;
 }
 
-/* line 18, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -41,12 +41,12 @@ blockquote, q {
   vertical-align: baseline;
   quotes: "" "";
 }
-/* line 45, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 45, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 20, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   margin: 0;
   padding: 0;
@@ -76,12 +76,12 @@ table {
   vertical-align: middle;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p302@rokvegasnightclub-com/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 6, ../../../app/stylesheets/screen.scss */
+/* line 7, ../../../app/stylesheets/screen.scss */
 body {
   background-image: url("/images/global/background.jpg");
   background-position: top center;
@@ -92,72 +92,73 @@ body {
   font-size: 12px;
 }
 
-/* line 16, ../../../app/stylesheets/screen.scss */
+/* line 17, ../../../app/stylesheets/screen.scss */
 a {
   color: #ec008c;
   text-decoration: none;
 }
 
-/* line 21, ../../../app/stylesheets/screen.scss */
+/* line 22, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #ffffff;
 }
 
-/* line 25, ../../../app/stylesheets/screen.scss */
+/* line 26, ../../../app/stylesheets/screen.scss */
 #header {
   width: 770px;
   height: 170px;
   margin: 20px auto 0px auto;
 }
 
-/* line 31, ../../../app/stylesheets/screen.scss */
+/* line 32, ../../../app/stylesheets/screen.scss */
 #logobox {
   width: 170px;
   height: 135px;
   margin: 0px auto;
 }
 
-/* line 37, ../../../app/stylesheets/screen.scss */
+/* line 38, ../../../app/stylesheets/screen.scss */
 #nav {
   width: 770px;
   margin: 0px auto;
   margin: 0px auto;
 }
 
-/* line 43, ../../../app/stylesheets/screen.scss */
+/* line 44, ../../../app/stylesheets/screen.scss */
 #container {
-  width: 750px;
+  width: 770px;
   margin: 0px auto;
 }
 
-/* line 48, ../../../app/stylesheets/screen.scss */
+/* line 49, ../../../app/stylesheets/screen.scss */
 #footer {
+  overflow: hidden;
+  *zoom: 1;
   width: 770px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin: 0px auto;
+  padding-top: 3em;
+  margin: 0 auto 0 auto;
+  text-align: center;
 }
-/* line 55, ../../../app/stylesheets/screen.scss */
+/* line 56, ../../../app/stylesheets/screen.scss */
 #footer li {
   float: left;
   list-style: none;
   margin: 0px 15px 0px 0px;
 }
 
-/* line 64, ../../../app/stylesheets/screen.scss */
+/* line 65, ../../../app/stylesheets/screen.scss */
 #homepage_top img {
   margin: 0px 15px 20px 0px;
 }
 
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 69, ../../../app/stylesheets/screen.scss */
 #eventbanner {
   width: 180px;
   height: 185px;
   float: right;
 }
 
-/* line 74, ../../../app/stylesheets/screen.scss */
+/* line 75, ../../../app/stylesheets/screen.scss */
 #col_left {
   margin: 0px 10px 0px 0px;
   width: 366px;
@@ -166,62 +167,62 @@ a:hover {
   letter-spacing: .5px;
 }
 
-/* line 82, ../../../app/stylesheets/screen.scss */
+/* line 83, ../../../app/stylesheets/screen.scss */
 #col_right {
   margin: 0px 0px 0px 0px;
   width: 364px;
   float: right;
 }
 
-/* line 88, ../../../app/stylesheets/screen.scss */
+/* line 89, ../../../app/stylesheets/screen.scss */
 #linkup {
   margin: 30px 0px 0px 0px;
 }
 
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 93, ../../../app/stylesheets/screen.scss */
 #quicklinks {
   margin: 0px 0px 20px 0px;
 }
 
-/* line 96, ../../../app/stylesheets/screen.scss */
+/* line 97, ../../../app/stylesheets/screen.scss */
 #quicklinks img {
   margin: 0px 0px 10px 0px;
 }
 
-/* line 100, ../../../app/stylesheets/screen.scss */
+/* line 101, ../../../app/stylesheets/screen.scss */
 #special_promos img {
   margin: 0px 0px 10px 0px;
 }
 
-/* line 104, ../../../app/stylesheets/screen.scss */
+/* line 105, ../../../app/stylesheets/screen.scss */
 #eventbanner img {
   margin: 0px -4px -4px 0px;
 }
 
-/* line 111, ../../../app/stylesheets/screen.scss */
+/* line 112, ../../../app/stylesheets/screen.scss */
 #event_slider {
   text-align: center;
   margin: 0px 0px 15px 0px;
 }
 
-/* line 116, ../../../app/stylesheets/screen.scss */
+/* line 117, ../../../app/stylesheets/screen.scss */
 #promo_container {
   width: 660px;
   margin: 0px auto;
 }
 
-/* line 121, ../../../app/stylesheets/screen.scss */
+/* line 122, ../../../app/stylesheets/screen.scss */
 #promo_container img {
   margin: 0px 0px 13px 0px;
 }
 
-/* line 127, ../../../app/stylesheets/screen.scss */
+/* line 128, ../../../app/stylesheets/screen.scss */
 #form {
   width: 346px;
   margin: 30px auto 0px auto;
 }
 
-/* line 132, ../../../app/stylesheets/screen.scss */
+/* line 133, ../../../app/stylesheets/screen.scss */
 #form p {
   margin: 0px 0px 20px 0px;
 }
