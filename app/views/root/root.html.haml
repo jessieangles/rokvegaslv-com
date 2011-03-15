@@ -3,7 +3,7 @@
   #eventbanner
     %a{ :href => "/events"}
       %img{ :src => "/images/homepage/featuredeventbox/flyer.gif"}
-    %a{ :href => "/guestlist"}  
+    %a{ :href => "/guestlists" }  
       %img{ :src => "/images/homepage/featuredeventbox/btn_guestlist.gif"}
     %a{ :href => "/reservations"} 
       %img{ :src => "/images/homepage/featuredeventbox/btn_reservation.gif"}
@@ -13,14 +13,18 @@
   The Las Vegas outpost of the legendary Miami venue, Rok Vegas is a relaxed nightclub experience for those who want to skip the red rope attitude without compromising on top notch music, amazing visuals and a welcoming atmosphere. With an indoor nightclub featuring the city's first 360° video screen and premium VIP seating, and an outdoor bar overlooking the strip, there's something for everyone at Rok.
   #linkup
     %img{ :src => "/images/homepage/titlebars/titlebar_linkup.jpg"}
-    %img{ :src => "/images/homepage/linkup_facebook_btn.gif"}
-    %img{ :src => "/images/homepage/linkup_twitter_btn.gif"}
+    %a{ :href => "http://www.facebook.com/RokVegasNightClub" }
+      %img{ :src => "/images/homepage/linkup_facebook_btn.gif"}
+    %a{ :href => "http://twitter.com/RokVegas" }
+      %img{ :src => "/images/homepage/linkup_twitter_btn.gif"}
   
 #col_right
   #quicklinks
     %img{ :src => "/images/homepage/titlebars/title_quicklinks.gif"}
-    %img{ :src => "/images/homepage/quicklink_reservation.jpg"}
-    %img{ :src => "/images/homepage/quicklink_guestlist.jpg"}
+    %a{ :href => "/reservations" }
+      %img{ :src => "/images/homepage/quicklink_reservation.jpg"}
+    %a{ :href => "/guestlists" }
+      %img{ :src => "/images/homepage/quicklink_guestlist.jpg"}
   #special_promos
     %img{ :src => "/images/homepage/titlebars/title_specialpromotions.gif"}
     %img{ :src => "/images/homepage/promos/promo_champagne.gif"}
