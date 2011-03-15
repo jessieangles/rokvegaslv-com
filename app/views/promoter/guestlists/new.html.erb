@@ -1,6 +1,4 @@
-<% form_tag '/guestlists', :remote => true,
-  :loading => "Element.show('indicator');",
-  :complete => "Element.hide('indicator');" do -%>
+<% form_tag '/guestlists' do -%>
 	
 	<div id="error">
 		<% if flash[:error] %>

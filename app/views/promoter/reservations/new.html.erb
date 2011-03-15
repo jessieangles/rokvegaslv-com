@@ -1,6 +1,4 @@
-<%= form_for [@reservation, Reservation.new], :remote => true,
-  :loading => "Element.show('indicator');",
-  :complete => "Element.hide('indicator');" do -%>
+<%= form_for [@reservation, Reservation.new] do -%>
 
   <div id="error">
   	<% if flash[:error] %>
