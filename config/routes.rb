@@ -15,6 +15,14 @@ RokvegasnightclubCom::Application.routes.draw do
   match '/reservations/thanks' => 'promoter/reservations#thanks'
   match '/guestlists/thanks' => 'promoter/guestlists#thanks'
 
+  # Alias /promo/anything.html to /events
+  match '/promo' => redirect("/events")
+  match '/promo/:id' => redirect("/events")
+  
+  # Same for /mobile/anything.html
+  match '/mobile' => redirect("/events")
+  match '/mobile/:id' => redirect("/events")
+
   root :to => 'root#root'
 
   get "root/root"
