@@ -6,9 +6,9 @@ contact_email:
 plan_your_party_email:
   name: The email address where notificaitons from the Plan Your Party form are sent.
   type: string
-  default: contact@rokvegasnightclub.com
+  default: egaffin@nyforme.com
   
 corporate_events_email:
   name: The email address where notificaitons from the Corporate Events form are sent.
   type: string
-  default: contact@rokvegasnightclub.com
+  default: egaffin@nyforme.com
