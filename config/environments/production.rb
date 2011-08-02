@@ -47,6 +47,19 @@ RokvegasnightclubCom::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+#
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain               => 'rokvegaslv.com',
+    :user_name            => 'app519144@heroku.com',
+    :password             => '945777f6ad7aa74c6',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  
+  }
+
 end
 
 # Don't generate CSS from SCSS in production, because Heroku can't.
