@@ -146,19 +146,24 @@ a:hover {
   margin: 0px 15px 0px 0px;
 }
 
-/* line 65, ../../../app/stylesheets/screen.scss */
+/* line 63, ../../../app/stylesheets/screen.scss */
+#socialmedia_links {
+  float: right;
+}
+
+/* line 69, ../../../app/stylesheets/screen.scss */
 #homepage_top img {
   margin: 0px 15px 20px 0px;
 }
 
-/* line 69, ../../../app/stylesheets/screen.scss */
+/* line 73, ../../../app/stylesheets/screen.scss */
 #eventbanner {
   width: 180px;
   height: 185px;
   float: right;
 }
 
-/* line 75, ../../../app/stylesheets/screen.scss */
+/* line 79, ../../../app/stylesheets/screen.scss */
 #col_left {
   margin: 0px 10px 0px 0px;
   width: 366px;
@@ -167,66 +172,66 @@ a:hover {
   letter-spacing: .5px;
 }
 
-/* line 83, ../../../app/stylesheets/screen.scss */
+/* line 87, ../../../app/stylesheets/screen.scss */
 #col_right {
   margin: 0px 0px 0px 0px;
   width: 364px;
   float: right;
 }
 
-/* line 89, ../../../app/stylesheets/screen.scss */
+/* line 93, ../../../app/stylesheets/screen.scss */
 #linkup {
   margin: 30px 0px 0px 0px;
 }
 
-/* line 93, ../../../app/stylesheets/screen.scss */
+/* line 97, ../../../app/stylesheets/screen.scss */
 #quicklinks {
   margin: 0px 0px 20px 0px;
 }
 
-/* line 97, ../../../app/stylesheets/screen.scss */
+/* line 101, ../../../app/stylesheets/screen.scss */
 #quicklinks img {
   margin: 0px 0px 10px 0px;
 }
 
-/* line 101, ../../../app/stylesheets/screen.scss */
+/* line 105, ../../../app/stylesheets/screen.scss */
 #special_promos img {
   margin: 0px 0px 10px 0px;
 }
 
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 #eventbanner img {
   margin: 0px -4px -4px 0px;
 }
 
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 116, ../../../app/stylesheets/screen.scss */
 #event_slider {
   text-align: center;
   margin: 10px 0px 0px 0px;
 }
-/* line 115, ../../../app/stylesheets/screen.scss */
+/* line 119, ../../../app/stylesheets/screen.scss */
 #event_slider img {
   margin: 0px 0px 10px 0px;
 }
 
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 124, ../../../app/stylesheets/screen.scss */
 #promo_container {
   width: 660px;
   margin: 0px auto;
 }
 
-/* line 125, ../../../app/stylesheets/screen.scss */
+/* line 129, ../../../app/stylesheets/screen.scss */
 #promo_container img {
   margin: 0px 0px 13px 0px;
 }
 
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 135, ../../../app/stylesheets/screen.scss */
 #form {
   width: 346px;
   margin: 30px auto 0px auto;
 }
 
-/* line 136, ../../../app/stylesheets/screen.scss */
+/* line 140, ../../../app/stylesheets/screen.scss */
 #form p {
   margin: 0px 0px 20px 0px;
 }
