@@ -5,7 +5,7 @@
 // GLOBAL STYLES //
 
 body {
-  background-image: url("/images/global/background.jpg");
+  background-image: url("/images/global/background_closed.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-color:#000000;
@@ -66,8 +66,10 @@ a:hover {
 
 // HOMEPAGE STYLES  //
 
-#homepage_top img {
-  margin:0px 15px 20px 0px;
+#homepage_top{
+  margin:0px auto;
+  width:950px;
+  height:650px;
 }
 
 #eventbanner {

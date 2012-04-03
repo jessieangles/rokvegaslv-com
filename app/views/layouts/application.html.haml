@@ -14,30 +14,6 @@
     %script{:type => "text/javascript", :charset => "utf-8", :src => "/javascripts/jquery.jcarousel-lite.min.js"}
     %link{:rel=>"stylesheet", :href=>"/css/anythingslider.css", :media=>"screen, projection", :type=>"text/css"}
     %link{:rel=>"stylesheet", :href=>"/css/theme-metallic.css", :media=>"screen, projection", :type=>"text/css"}
-  #header
-    #socialmedia_links
-      %img{ :src => "/images/global/socialmedia_links/socialmedia_01.png"}
-      %a{ :href => "http://www.facebook.com/RokVegasNightClub"}
-        %img{ :src => "/images/global/socialmedia_links/socialmedia_02.png"}
-      %a{ :href => "http://twitter.com/RokVegas"}
-        %img{ :src => "/images/global/socialmedia_links/socialmedia_03.png"}
-      
-    %a{ :href => "/"}
-      #logobox
-    #nav
-      %a{ :href => "/events"}
-        %img{ :src => "/images/global/nav/nav_01_events.gif"}
-      %a{ :href => "/guestlists"}
-        %img{ :src => "/images/global/nav/nav_02_guestlist.gif"}
-      %a{ :href => "/reservations"}
-        %img{ :src => "/images/global/nav/nav_03_reservations.gif"}
-      %a{ :href => "/contactus"}
-        %img{ :src => "/images/global/nav/nav_04_contactus.gif"}
-      %a{ :href => "/planyourparty"}
-        %img{ :src => "/images/global/nav/nav_05_plan.gif"}
-      %a{ :href => "/corporateevents"}
-        %img{ :src => "/images/global/nav/nav_06_corpevents.gif"}
+
   #container
     = yield
-  #footer
-    Copyright &copy; #{Time.now.year} Rok Vegas. All rights reserved.
